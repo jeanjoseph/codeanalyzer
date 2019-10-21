@@ -5,7 +5,7 @@ jobs:
       # specify the version you desire here
       - image: circleci/openjdk:8-jdk
     steps:
-        - run: echo "my first build"
+        - run: echo "build completed"
 
   default_build:
     docker:
@@ -49,3 +49,5 @@ workflows:
     jobs: 
       - default_build
       - echo_job
+          requires:
+            - default_build
