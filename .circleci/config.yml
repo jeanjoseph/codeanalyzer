@@ -49,5 +49,3 @@ workflows:
     jobs: 
       - default_build
       - echo_job
-          requires:
-            - default_build
