@@ -1,7 +1,11 @@
 version: 2
 jobs:
   echo_job:
-    - run: echo "my first build"
+    docker:
+      # specify the version you desire here
+      - image: circleci/openjdk:8-jdk
+    steps:
+        - run: echo "my first build"
 
   default_build:
     docker:
