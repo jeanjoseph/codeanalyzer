@@ -6,8 +6,4 @@ jobs:
     working_directory: ~/ca
     steps:
       - checkout
-      - run: 
-        name: "executing mvn clean install"
-        command: |
-          echo "my first build"
       - mvn -DskipTests clean install 
