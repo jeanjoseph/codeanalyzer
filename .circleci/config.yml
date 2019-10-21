@@ -1,6 +1,6 @@
 version: 2
 jobs:
-  default_build:
+  build:
     docker:
       - image: circleci/openjdk:8-jdk
     working_directory: ~/ca
