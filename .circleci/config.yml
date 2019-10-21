@@ -1,0 +1,12 @@
+version: 2
+jobs:
+  default_build:
+    docker:
+      - image: circleci/openjdk:8-jdk
+    working_directory: ~/ca
+    steps:
+      - checkout
+      - run: 
+        command |
+          echo "my first build"
+          mvn clean install
