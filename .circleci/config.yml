@@ -10,4 +10,4 @@ jobs:
         name: "executing mvn clean install"
         command: |
           echo "my first build"
-          mvn clean install
+      - mvn -DskipTests clean install 
