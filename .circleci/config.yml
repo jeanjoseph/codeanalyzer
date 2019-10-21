@@ -1,6 +1,9 @@
 version: 2
 jobs:
-  build:
+  echo_job:
+    - run: echo "just an echo"
+
+  default_build:
     docker:
       # specify the version you desire here
       - image: circleci/openjdk:8-jdk
@@ -35,3 +38,10 @@ jobs:
 
       # run tests!
       - run: mvn integration-test
+
+workflows:
+  version: 2
+  my-workflow:
+    jobs: 
+      - default_build
+      - echo_job
