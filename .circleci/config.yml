@@ -1,7 +1,7 @@
 version: 2
 jobs:
   echo_job:
-    - run: echo "just an echo"
+    - run: echo "my first build"
 
   default_build:
     docker:
