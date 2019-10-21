@@ -2,7 +2,7 @@ version: 2
 jobs:
   build:
     docker:
-      - image: circleci/openjdk:8-jdk
+      - image: circleci/classic:201808-01
     working_directory: ~/ca
     steps:
       - checkout
