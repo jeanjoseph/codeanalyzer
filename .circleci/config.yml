@@ -3,7 +3,7 @@ jobs:
   docker_build:
     docker:
       # specify the version you desire here
-      - image: circleci/cci-demo-docker-primary:0.0.2
+      - image: circleci/buildpack-deps
     working_directory: ~/repo
     steps:
         - checkout
