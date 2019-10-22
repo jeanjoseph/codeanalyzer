@@ -8,11 +8,11 @@ jobs:
         - run: echo "docker"
 
         - run:
-          command: |
-            TAG="0.1.${CIRCLE_BUILD_NUM}"
-            docker build -t jeanjoseph/circi:$TAG .
-            docker login -u $DOCKER_LOGIN -p $DOCKER_PASSWORD
-            docker push jeanjoseph/circi:$TAG
+            command: |
+              TAG="0.1.${CIRCLE_BUILD_NUM}"
+              docker build -t jeanjoseph/circi:$TAG .
+              docker login -u $DOCKER_LOGIN -p $DOCKER_PASSWORD
+              docker push jeanjoseph/circi:$TAG
 
 
   default_build:
